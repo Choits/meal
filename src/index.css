@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* TODO: Add actual Gmarket Sans font files to /public/fonts before deployment. */
+@font-face {
+  font-family: "Gmarket Sans";
+  src: url("/fonts/GmarketSansTTFMedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gmarket Sans";
+  src: url("/fonts/GmarketSansTTFBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fallback CDN webfonts for immediate rendering when local font files are not yet uploaded */
+@font-face {
+  font-family: "Gmarket Sans Fallback";
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gmarket Sans Fallback";
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-deep-olive: #4F6F00;
+  --color-olive-green: #6B7F1A;
+  --color-sage-green: #DDE8B2;
+  --color-cream-bg: #FAF7EF;
+  --color-card-white: #FFFFFF;
+  --color-warm-peach: #FFE7DD;
+  --color-soft-gray: #EEF0EA;
+  --color-text-dark: #2A241A;
+  
+  --font-gmarket: "Gmarket Sans", "Gmarket Sans Fallback", "Pretendard", "Noto Sans KR", sans-serif;
+  --font-sans: "Gmarket Sans", "Gmarket Sans Fallback", "Pretendard", "Noto Sans KR", sans-serif;
+}
+
+html,
+body,
+#root,
+.app,
+.app-shell,
+.mobile-app,
+.screen,
+.screen *,
+button,
+input,
+select,
+textarea {
+  font-family: "Gmarket Sans", "Gmarket Sans Fallback", "Pretendard", "Noto Sans KR", sans-serif !important;
+}
+
+body {
+  background-color: #FAF7EF;
+  color: #2A241A;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Ambient shadow designs from the system design spec */
+.ambient-shadow {
+  box-shadow: 0 10px 30px -10px rgba(79, 111, 0, 0.08), 0 1px 3px rgba(79, 111, 0, 0.03);
+}
+
+.ambient-shadow-sm {
+  box-shadow: 0 4px 15px -5px rgba(79, 111, 0, 0.06);
+}
+
+/* Scrollbar behaviors */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

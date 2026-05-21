@@ -1,0 +1,6 @@
+{
+  "name": "씨마스고등학교 급식",
+  "description": "씨마스고등학교 학생, 교사, 학부모를 위한 따뜻하고 편리한 급식 정보 제공 웹앱",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
